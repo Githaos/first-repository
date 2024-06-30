@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <img
+        width="400px"
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201811%2F01%2F20181101221440_wmjwj.png&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1722335365&t=e9e5bb978a273932cd158a6fbc66c57c"
+        alt=""> 
+      <div class="box">
+        <h2>叫爸爸，不叫爸爸关不了弹窗</h2>
+        <div><img width="100%" src="http://mms2.baidu.com/it/u=1825264006,3023840767&fm=253&app=120&f=JPEG?w=426&h=240" alt=""></div>
+        <div class="btn">
+          <div class="btnl">YES</div>
+          <div class="btnr">NO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<style>
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    width: 400px;
+    height: 100vh;
+    position: relative;
+  }
+
+  .box {
+    width: 350px;
+    margin: 20px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .btn{
+    display: flex;
+  }
+  .btnl,.btnr{
+    width: 125px;
+    height: 50px;
+    margin: 20px;
+    border: 1px solid #000;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: aqua;
+    color: #fff;
+    font-size: 20px;
+  }
+</style>
+<script>
+  let box = document.querySelector('.box')
+  let btnl = document.querySelector('.btnl')
+  let btnr = document.querySelector('.btnr')
+  function showModal() {
+    var result = confirm("你确定不叫爸爸吗？");
+    if (result) {
+      showModal(); 
+    }else{
+      confirm('叫一声嘛')
+      confirm('快叫')
+      confirm('快')
+      confirm('不叫是吧')
+      confirm('关不掉吧')
+      confirm('关不掉')
+      confirm('就是关不掉')
+      confirm('乖女儿')
+    }
+  }
+  btnr.addEventListener('click', function () {
+    showModal(); 
+  })
+  btnl.addEventListener('click', function () {
+    alert('爸爸爱你')
+  })
+</script>
